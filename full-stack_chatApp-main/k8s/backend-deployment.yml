@@ -12,16 +12,16 @@ spec:
     metadata:
       name: backend-pod
       namespace: chat-app
-      labels: 
+      labels:
         app: backend
     spec:
       containers:
       - name: chatapp-backend
-        image: trainwithshubham/chatapp-backend:latest
+        image: harsh5611/chatapp-backend:latest
         ports:
-        - containerPort: 5001
+        - containerPort:5001
         env:
-        - name: NODE_ENV
+        - name: NODE_ENV 
           value: production
         - name: MONGODB_URI
           value: "mongodb://mongoadmin:secret@mongodb:27017/dbname?authSource=admin"
